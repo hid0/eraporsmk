@@ -1,0 +1,29 @@
+{
+    "name": "staudenmeir/eloquent-eager-limit",
+    "description": "Laravel Eloquent eager loading with limit",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonas Staudenmeir",
+            "email": "mail@jonas-staudenmeir.de"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/database": "5.8.*"
+    },
+    "require-dev": {
+        "laravel/homestead": "^8.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Staudenmeir\\EloquentEagerLimit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
