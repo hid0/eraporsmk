@@ -57,9 +57,9 @@
 </table>
 @endif
 <br />
-@if (strpos($get_siswa->rombongan_belajar->kurikulum->nama_kurikulum, 'Pusat') == false)
 <div class="strong">A.&nbsp;&nbsp;Nilai Akademik</div>
-@endif
+{{-- @if (strpos($get_siswa->rombongan_belajar->kurikulum->nama_kurikulum, 'Pusat') == false)
+@endif --}}
 <table class="table" border="1">
 	<thead>
 		<tr>
@@ -168,7 +168,7 @@
 	</tbody>
 </table>
 <br />
-@if (strpos($get_siswa->rombongan_belajar->kurikulum->nama_kurikulum, 'Pusat') !== false)
+{{-- @if (strpos($get_siswa->rombongan_belajar->kurikulum->nama_kurikulum, 'Pusat') !== false)
 <table border="1" class="table">
 	<thead>
 		<tr>
@@ -299,5 +299,11 @@
 		<td style="padding:10px;">{!! $get_siswa->catatan_wali ? $get_siswa->catatan_wali->uraian_deskripsi : '' !!}</td>
 	</tr>
 </table>
-@endif
+@endif --}}
+<div class="strong">B.&nbsp;&nbsp;Catatan Akademik</div>
+<table width="100%" border="1">
+	<tr>
+		<td style="padding:10px;">{!! $get_siswa->catatan_wali ? $get_siswa->catatan_wali->uraian_deskripsi : '' !!}</td>
+	</tr>
+</table>
 @endsection
