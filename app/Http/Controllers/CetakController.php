@@ -349,6 +349,13 @@ class CetakController extends Controller
 				$rapor_karakter = view('cetak.rapor_karakter', $params);
 				$pdf->getMpdf()->WriteHTML('<pagebreak />');
 				$pdf->getMpdf()->WriteHTML($rapor_karakter);
+			} else {
+				$pdf->getMpdf()->WriteHTML('<pagebreak />');
+				$rapor_catatan = view('cetak.rapor_catatan', $params);
+				$pdf->getMpdf()->WriteHTML($rapor_catatan);
+				$rapor_karakter = view('cetak.rapor_karakter', $params);
+				$pdf->getMpdf()->WriteHTML('<pagebreak />');
+				$pdf->getMpdf()->WriteHTML($rapor_karakter);
 			}
 			return $pdf->stream($general_title.'-NILAI.pdf');
 		} else {
